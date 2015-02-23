@@ -1,6 +1,8 @@
 # bad-saarow.github.io
 community driven website of Bad Saarow
 
+
+
 ## amt-scharmützelsee.de
 ### keine oder unzureichende Informationen
 - Wie genau funktioniert das mit der Kurtaxe?
