@@ -1,47 +1,36 @@
-# bad-saarow.github.io
-community driven website of Bad Saarow
+# offene und unabhängige Seite für Bad Saarow
 
+Dieses Repository beinhaltet den Quelltext für die Website: http://bad-saarow.github.io
 
+## Webseite auf dem eigenen Computer anzeigen und anpassen
 
-## amt-scharmützelsee.de
-### keine oder unzureichende Informationen
-- Wie genau funktioniert das mit der Kurtaxe?
-- DSL Alternativen
-- Müllabfuhr
-- KFZ An/Ummeldung
-- sehr schwer erreichbare Informationen (z.B in PDFs)
+Bevor es losgeht, brauchst du einige Programme auf dem Computer
 
-### bad-saarow.de
-- fungiert als Gemeindeseite ist aber kommerziell und nicht unabhängig (Bad Saarow Kur GmbH)
-- kostenpflichtige Aufnahme
+  * [Node.js & npm](http://nodejs.org)
+  * [git](http://git-scm.com/)
+  * Terminal/Konsole
 
-## Userinterface
-- suboptimale Darstellung für mobile bzw. kleine Displays
-- sehr viele PDF 
-- nicht mehrsprachig
+## Los geht's
+Im Terminal folgende Befehle nacheinander ausführen
 
-# Lösungsvorschlag
+```bash
+git clone https://github.com/bad-saarow/bad-saarow.github.io.git
+cd bad-saarow.github.io
+npm install
+npm run bower-install
+npm run gulp
+```
 
-community driven website 
+Nun kann im Browser die Website unter der folgenden URL aufgerufen werden:  
+[http://localhost:9776](http://localhost:9776)
 
-## Motivation
-Open Source, Wikipedia, OpenStreetMap
+## Verzeichnis Struktur
 
-## Ziel
-
-### Informationsplatform, die folgende Aspekte berücksichtigt
-
-##### offen
-JEDER (sowohl Bürger als auch Gast) kann dazu beitragen
-
-##### transparent und versioniert
-JEDER kann sehen wann wer welche Änderungen vorgenommen hat
-
-##### keine Kosten um Informationen zu lesen oder zu schreiben/bearbeiten
-
-##### werbefrei
-
-##### technisch auf dem neusten Stand
-- mobile optimiert
-- mehrsprachig
-- einfache Bearbeitung von Informationen
+  * `bower_components`: frontend assets for foundation and its dependencies, you should don't touch them, because if you update them, your changes will be overwritten
+  * `gulp`: actually this folder contains small task, which control the build step
+  * `public`: all files for your website will be bundled or copied into this directory
+  * `src`: this directory contains your app files
+    * `js`: your javascript files, they will be concatenated with foundations file into app.js
+    * `scss`: your custom app styles
+    * `pages`: your html pages
+    * `templates: 'contains you jade templates'

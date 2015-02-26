@@ -1,0 +1,139 @@
+extends _base
+
+block body
+
+    include _navigation
+
+    header
+      .row
+        .large-12.column.head-pic
+          img(src='/assets/bahnhof.jpg')
+        .orbit-bullets-container
+          span Foto von 
+            a(href='https://www.flickr.com/photos/mompl/14998689656/', target='_blank')
+              em mompl
+    br
+    .row
+      .large-12.column
+        h2 Eine offene und unabhängige Seite für Bad Saarow
+        p.
+          Ziel dieser Webseite ist einen Machbarkeitsnachweis (Proof of Concept)
+          für eine unabhängige Webseite mit Inhalten, die von Bürgern der Gemeinde
+          gesteuert werden kann.
+          <br>
+          Aktuell sind noch keine Inhalte vorhanden. Die Navigation am oberen Rand
+          ist nur ein Platzhalter.
+
+    .row
+      .medium-3.large-3.text-center.columns
+        img(src='http://placehold.it/150x150&text=[independant]')
+        h4 Unabhängig
+        p
+          |Die Seite gehört keiner kommerziellen oder wirtschaflichten Gruppe an. 
+          |Trotzdem ist die Seite werbefrei.
+      .medium-3.large-3.text-center.column
+        img(src='http://placehold.it/150x150&text=[free]')
+        h4 Frei für alle
+        p
+          |Die Inhalte sind kostenlos zugänglich, sowohl das Lesen als auch
+          |das Bearbeiten, wie bei Wikipedia.
+      .medium-3.large-3.text-center.column
+        img(src='http://placehold.it/150x150&text=[open]')
+        h4 Offen und Transparent
+        p
+          |Der Quellcode der Seite offen für alle.
+          |Jede Änderung kann überprüft und ggf. rückgängig gemacht werden.
+      .medium-3.large-3.text-center.column
+        img(src='http://placehold.it/150x150&text=[modern]')
+        h4 Moderne Technologie
+        p
+          | Die Seite ist für verschiedene Geräte optimiert (Desktop, Tablet, Handy).
+
+    //- ul.example-orbit-content(data-orbit='')
+    //-   li(data-orbit-slide='headline-1')
+    //-     .text-center.panel
+    //-       h2 Mitmachen
+    //-       h3 Eigene Meinung früh einbringen
+    //-       p
+    //-         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos animi, nobis illo. Repellendus atque dolorem, officia recusandae autem, laudantium consectetur, neque!
+    //-   li(data-orbit-slide='headline-2')
+    //-     .text-center.panel
+    //-       h2 Headline 2
+    //-       h3 Subheadline
+    //-       p
+    //-         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos animi, nobis illo. Repellendus atque dolorem, officia recusandae autem, laudantium consectetur, neque!
+    //-   li(data-orbit-slide='headline-3')
+    //-     .text-center.panel
+    //-       h2 Headline 3
+    //-       h3 Subheadline
+    //-       p
+    //-         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos animi, nobis illo. Repellendus atque dolorem, officia recusandae autem, laudantium consectetur, neque!
+
+    .row
+      .large-8.columns
+        h4 Mithelfen und Mitgestalten
+
+        h5 So einfach wie noch nie
+        p.
+          Die Inhalte sollen nicht nur sehr einfach zugänglich sein, d.h. egal
+          ob mit Desktop, Tablet oder einem Handy, sondern auch genauso einfach
+          zu bearbeiten sein, ohne dazu Programmier- oder HTML-Kentnisse
+          besitzen zu müssen.
+
+        h5 Open Source mit GitHub
+        p
+          |Der Quellcode der Seite und auch die Diskussion um die Inhalte und Struktur
+          |wird auf GitHub verwaltet.
+          br
+          |Um mitreden zu können, wird ein Konto benötigt, welches kostenlos 
+          | mit einer E-Mail Adresse registriert werden kann.
+          br
+          a(href='https://github.com/bad-saarow/discuss') Dikussion
+          br
+          a(href='https://github.com/bad-saarow/bad-saarow.github.io') Quellcode
+
+        h5 Alternativ per E-Mail
+        p
+          | Alternativ kann die Diskussion über den folgenden öffentlichen E-Mail-Verteiler geführt werden
+          | Einfach eine E-Mail an folgende Adresse senden:
+          br
+          a(href='mailto:bad-saarow@googlegroups.com') bad-saarow@googlegroups.com
+
+      .large-4.columns
+        ul.small-block-grid-3
+          li
+            a(href='#')
+              img(src='http://placehold.it/120x120')
+          li
+            a(href='#')
+              img(src='http://placehold.it/120x120')
+          li
+            a(href='#')
+              img(src='http://placehold.it/120x120')
+          li
+            a(href='#')
+              img(src='http://placehold.it/120x120')
+          li
+            a(href='#')
+              img(src='http://placehold.it/120x120')
+          li
+            a(href='#')
+              img(src='http://placehold.it/120x120')
+
+    .row
+        .large-12.column
+          h4 Themen aus dem E-Mail-Verteiler
+
+          iframe#forum_embed(
+            src="javascript:void(0)",
+            scrolling="no",
+            frameborder="0",
+            width="900",
+            height="700")
+          script.
+            document.getElementById('forum_embed').src =
+               'https://groups.google.com/forum/embed/?place=forum/bad-saarow'
+               + '&showsearch=true&showpopout=true&showtabs=false'
+               + '&parenturl=' + encodeURIComponent(window.location.href);
+
+    include _footer
